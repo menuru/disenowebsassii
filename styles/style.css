@@ -7,7 +7,7 @@
 body {
   background-color: #000000;
   position: relative;
-  background-image: url("./img/background.jpg");
+  background-image: url("../img/background.jpg");
   background-repeat: repeat;
   background-position: center;
   background-attachment: fixed; }
@@ -56,7 +56,7 @@ h2 {
 
 .artistName {
   font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   padding-top: 20px;
   color: #ffffff;
   text-align: center;
@@ -123,12 +123,20 @@ img {
   border: dotted 2px white;
   filter: drop-shadow(16px 16px 10px rgba(128, 128, 128, 0.22)); }
 
+.click-zoom input[type=checkbox] {
+  display: none; }
+
+.click-zoom img {
+  transition: transform 0.25s ease;
+  cursor: zoom-in; }
+
+.click-zoom input[type=checkbox]:checked ~ img {
+  transform: scale(1.2);
+  cursor: zoom-out; }
+
 .img-date {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 40px;
-  width: 30%; }
+  width: 20%; }
 
 .navMenu {
   background-color: white;
@@ -163,6 +171,36 @@ iframe {
   border-radius: 500px;
   padding-right: 10px;
   padding-left: 10px; }
+
+.container {
+  max-width: 820px;
+  margin: 0px auto;
+  margin-top: 50px; }
+
+.comment {
+  float: left;
+  width: 100%;
+  height: auto; }
+
+.commenter {
+  float: left; }
+
+.commenter img {
+  width: 35px;
+  height: 35px; }
+
+.comment-text-area {
+  float: left;
+  width: 100%;
+  height: auto; }
+
+.textinput {
+  float: left;
+  width: 100%;
+  min-height: 75px;
+  outline: none;
+  resize: none;
+  border: 1px solid grey; }
 
 div.terms {
   padding-top: 10px;
